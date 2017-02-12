@@ -46,8 +46,8 @@ guest_shutdown () {
     status=$(get_vm_id_status $1);
 
     if [ $? -eq 1 ]; then
-        echo -e "Running: vim-cmd vmsvc/power.off $1";
-        $(vim-cmd vmsvc/power.off $1);
+        echo -e "Running: vim-cmd vmsvc/power.shutdown $1";
+        $(vim-cmd vmsvc/power.shutdown $1);
     fi
 }
 
